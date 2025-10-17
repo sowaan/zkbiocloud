@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-16 14:07:48.558037",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "api_url",
+  "token",
+  "column_break_utng",
+  "port",
+  "disabled",
+  "result_mapping_fields_section",
+  "employee_device_id",
+  "gps_location",
+  "log_type",
+  "column_break_evbz",
+  "time_field_name",
+  "device_id",
+  "section_break_grpc",
+  "detail_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "api_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "API URL"
+  },
+  {
+   "fieldname": "port",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Port"
+  },
+  {
+   "fieldname": "token",
+   "fieldtype": "Data",
+   "label": "Token"
+  },
+  {
+   "description": "Please define the field names mapping in the json file result.",
+   "fieldname": "result_mapping_fields_section",
+   "fieldtype": "Section Break",
+   "label": "Result Mapping Fields"
+  },
+  {
+   "default": "BadgeNumber",
+   "fieldname": "employee_device_id",
+   "fieldtype": "Data",
+   "label": "Employee Device Id"
+  },
+  {
+   "default": "VerifyTime",
+   "fieldname": "time_field_name",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "default": "Status",
+   "fieldname": "log_type",
+   "fieldtype": "Data",
+   "label": "Log Type"
+  },
+  {
+   "default": "DeviceSerialNumber",
+   "fieldname": "device_id",
+   "fieldtype": "Data",
+   "label": "Device ID"
+  },
+  {
+   "default": "GpsLocation",
+   "fieldname": "gps_location",
+   "fieldtype": "Data",
+   "label": "GPS Location"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "column_break_utng",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_evbz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_grpc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "detail_table",
+   "fieldtype": "Table",
+   "options": "Log Type Mapping"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-17 11:28:42.967288",
+ "modified_by": "Administrator",
+ "module": "ZKTeco BioTime Integration",
+ "name": "ZKTeco Servers",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
