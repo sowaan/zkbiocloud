@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-17 14:32:01.715575",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "badge_number",
+  "verify_time",
+  "status",
+  "reason",
+  "device_id",
+  "gps_location",
+  "employee"
+ ],
+ "fields": [
+  {
+   "fieldname": "badge_number",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Badge Number"
+  },
+  {
+   "fieldname": "verify_time",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Verify Time"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Reason"
+  },
+  {
+   "fieldname": "device_id",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Device ID"
+  },
+  {
+   "fieldname": "gps_location",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "GPS Location"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Employee"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-17 14:33:50.783797",
+ "modified_by": "Administrator",
+ "module": "ZKTeco BioTime Integration",
+ "name": "ZKTeco Import Log Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

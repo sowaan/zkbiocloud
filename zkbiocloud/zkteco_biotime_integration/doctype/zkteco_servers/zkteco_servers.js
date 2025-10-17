@@ -1,5 +1,9 @@
 frappe.ui.form.on('ZKTeco Servers', {
     refresh(frm) {
+        if (frm.is_new()) {
+            return;
+        }
+
         frm.add_custom_button(__('Import Data'), function () {
 
             // ✅ Default date range: last 15 days
@@ -33,7 +37,7 @@ frappe.ui.form.on('ZKTeco Servers', {
             ],
             function (values) {
                 frappe.call({
-                    method: "zkbiocloud.api.api.import_zkteco_logs_to_checkins",  // ⚙️ Update path!
+                    method: "zkbiocloud.utils.zkteco_import_log.import_zkteco_logs_to_checkins",  // ⚙️ Update path!
                     args: {
                         start_date: values.from_date,
                         end_date: values.to_date,
@@ -70,5 +74,32 @@ frappe.ui.form.on('ZKTeco Servers', {
             __('Run Import')
             );
         }).addClass('btn-primary');
-    }
+    },
+onload_post_render(frm) {
+        // ✅ Automatically add default log type mappings if table is empty
+        if (frm.is_new() && (!frm.doc.detail_table || frm.doc.detail_table.length === 0)) {
+
+            const default_mappings = [
+                {
+                    log_type: "IN",
+                    expected_values: "in, check-in, check in, punch-in"
+                },
+                {
+                    log_type: "OUT",
+                    expected_values: "out, check-out, check out, punch-out"
+                }
+            ];
+
+            default_mappings.forEach(mapping => {
+                frm.add_child("detail_table", mapping);
+            });
+
+            frm.refresh_field("detail_table");
+            frappe.msgprint({
+                title: __("Default Mappings Added"),
+                message: __("Default IN/OUT mappings have been added to Log Type Mapping table."),
+                indicator: "blue"
+            });
+        }
+    }    
 });

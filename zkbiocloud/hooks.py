@@ -148,23 +148,24 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"zkbiocloud.tasks.all"
 # 	],
 # 	"daily": [
 # 		"zkbiocloud.tasks.daily"
 # 	],
-# 	"hourly": [
-# 		"zkbiocloud.tasks.hourly"
-# 	],
+	# "hourly": [
+	# 	"zkbiocloud.utils.zkteco_schedule_import.zkteco_hourly_import_logs"
+	     
+	# ],
 # 	"weekly": [
 # 		"zkbiocloud.tasks.weekly"
 # 	],
 # 	"monthly": [
 # 		"zkbiocloud.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------

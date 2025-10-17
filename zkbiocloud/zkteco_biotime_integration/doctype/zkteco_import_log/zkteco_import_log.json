@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ZK-LOG-{######}",
+ "creation": "2025-10-17 14:23:38.785002",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "server",
+  "employee_id",
+  "result_status",
+  "column_break_liqc",
+  "start_date",
+  "inserted_count",
+  "error_message",
+  "column_break_fodq",
+  "end_date",
+  "skipped_count",
+  "section_break_oxsi",
+  "log_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "server",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Server",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Read Only",
+   "label": "Employee"
+  },
+  {
+   "fieldname": "column_break_liqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fodq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inserted_count",
+   "fieldtype": "Read Only",
+   "label": "Inserted Records"
+  },
+  {
+   "fieldname": "skipped_count",
+   "fieldtype": "Read Only",
+   "label": "Skipped Records"
+  },
+  {
+   "fieldname": "result_status",
+   "fieldtype": "Read Only",
+   "label": "Result Status"
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Read Only",
+   "label": "Error Message"
+  },
+  {
+   "fieldname": "section_break_oxsi",
+   "fieldtype": "Section Break",
+   "label": "Failed Records"
+  },
+  {
+   "fieldname": "log_details",
+   "fieldtype": "Table",
+   "options": "ZKTeco Import Log Detail"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-17 16:30:26.491259",
+ "modified_by": "Administrator",
+ "module": "ZKTeco BioTime Integration",
+ "name": "ZKTeco Import Log",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:ZK-SRV-{#####}",
  "creation": "2025-10-16 14:07:48.558037",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -10,33 +11,44 @@
   "column_break_utng",
   "port",
   "disabled",
+  "create_logs",
+  "column_break_caoe",
+  "api_to_call",
+  "last_successful_sync",
   "result_mapping_fields_section",
   "employee_device_id",
-  "gps_location",
   "log_type",
   "column_break_evbz",
   "time_field_name",
   "device_id",
+  "column_break_nojf",
+  "gps_location",
   "section_break_grpc",
   "detail_table"
  ],
  "fields": [
   {
+   "description": "http://127.0.0.1/ or https://www.abc.com/",
    "fieldname": "api_url",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "API URL"
+   "label": "API URL / IP",
+   "reqd": 1
   },
   {
+   "description": "Port ID (e.g. 1028)",
    "fieldname": "port",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Port"
+   "label": "Port",
+   "reqd": 1
   },
   {
+   "description": "Contact device vendor to get the token",
    "fieldname": "token",
    "fieldtype": "Data",
-   "label": "Token"
+   "label": "Token",
+   "reqd": 1
   },
   {
    "description": "Please define the field names mapping in the json file result.",
@@ -90,21 +102,50 @@
   },
   {
    "fieldname": "section_break_grpc",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Log Type Mapping (IN/OUT)"
   },
   {
    "fieldname": "detail_table",
    "fieldtype": "Table",
    "options": "Log Type Mapping"
+  },
+  {
+   "default": "api_gettransctions",
+   "fieldname": "api_to_call",
+   "fieldtype": "Data",
+   "label": "API To Call",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "create_logs",
+   "fieldtype": "Check",
+   "label": "Create Logs"
+  },
+  {
+   "fieldname": "last_successful_sync",
+   "fieldtype": "Datetime",
+   "label": "Last Sync",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_caoe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nojf",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-17 11:28:42.967288",
+ "modified": "2025-10-17 18:12:29.383063",
  "modified_by": "Administrator",
  "module": "ZKTeco BioTime Integration",
  "name": "ZKTeco Servers",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
