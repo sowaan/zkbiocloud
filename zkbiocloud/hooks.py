@@ -155,10 +155,9 @@ scheduler_events = {
 # 	"daily": [
 # 		"zkbiocloud.tasks.daily"
 # 	],
-	# "hourly": [
-	# 	"zkbiocloud.utils.zkteco_schedule_import.zkteco_hourly_import_logs"
-	     
-	# ],
+	"hourly": [
+		"zkbiocloud.utils.zkteco_schedule_import.zkteco_hourly_import_logs"
+	],
 # 	"weekly": [
 # 		"zkbiocloud.tasks.weekly"
 # 	],
